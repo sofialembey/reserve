@@ -1180,6 +1180,51 @@ input,select,textarea{
  #demo .results{grid-template-columns:minmax(0,1fr)!important}
  #demo .map-toolbar{grid-template-columns:minmax(0,1fr)!important}
 }
+</style>
+<style id="reserve-demo-edge-to-edge">
+/* Let the demo workspace use the actual mobile viewport width */
+@media(max-width:760px){
+ #demo{width:100%!important;overflow:visible!important}
+ #demo>.wrap,#demo .wrap{
+  width:100%!important;max-width:none!important;
+  margin-left:0!important;margin-right:0!important;
+  padding-left:8px!important;padding-right:8px!important;
+ }
+ #demo .workspace{
+  display:grid!important;grid-template-columns:minmax(0,1fr)!important;
+  width:100%!important;max-width:none!important;min-width:0!important;
+  margin:0!important;position:relative!important;left:auto!important;
+  border-radius:18px!important;
+ }
+ #demo .sidebar{
+  display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  width:100%!important;min-width:0!important;max-width:none!important;
+  overflow:visible!important;flex-wrap:initial!important;
+  gap:8px!important;padding:12px!important;
+ }
+ #demo .side-link{
+  display:flex!important;flex:initial!important;
+  width:100%!important;min-width:0!important;max-width:none!important;
+  min-height:50px!important;white-space:normal!important;
+  justify-content:center!important;align-items:center!important;
+  text-align:center!important;padding:10px 7px!important;
+  font-size:12px!important;line-height:1.25!important;
+ }
+ #demo .panel{
+  width:100%!important;max-width:none!important;min-width:0!important;
+  padding:16px 12px!important;
+ }
+ #demo .tab-panel,#demo .panelhead,#demo .calc-box,#demo .results{
+  width:100%!important;max-width:none!important;min-width:0!important;
+ }
+}
+@media(max-width:430px){
+ #demo>.wrap,#demo .wrap{padding-left:5px!important;padding-right:5px!important}
+ #demo .workspace{border-radius:15px!important}
+ #demo .sidebar{padding:9px!important;gap:6px!important}
+ #demo .side-link{min-height:46px!important;font-size:11px!important}
+ #demo .panel{padding:14px 10px!important}
+}
 </style></head><body>
 <header class="nav"><div class="wrap navin"><a class="logo" href="#top"><span class="logo-mark">◆</span>RESERVE<span style="color:#5e95ed;font-size:12px;letter-spacing:1px">SMART NETWORK</span></a><nav class="links"><a href="#modules">Решение</a><a href="#demo">Карта и демо</a><a href="#pricing">Тарифы</a></nav><button class="btn sm" onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">Открыть демо ↗</button></div></header>
 <main id="top"><div class="connected-route"><section class="hero" aria-labelledby="hero-title">
