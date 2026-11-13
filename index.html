@@ -279,6 +279,168 @@ html{scroll-behavior:smooth;scroll-padding-top:86px}body{background:var(--ice);c
 #demo .geo-book-actions button{min-height:42px;padding:10px 15px;border:1px solid #1457d9;border-radius:11px;background:linear-gradient(110deg,#1457d9,#2455f5);color:#fff;font-weight:750;cursor:pointer}
 #demo .geo-book-actions .geo-economics-link{background:#edf4ff;color:#1956c8;border-color:#dbe7fa}
 @media(max-width:430px){#demo .geo-book-actions{display:grid;grid-template-columns:1fr}#demo .geo-book-actions button{width:100%}}
+</style><style id="reserve-mobile-first-v1">
+/* Mobile-first layout repair: prevent page-level horizontal overflow */
+*,*::before,*::after{box-sizing:border-box}
+html{width:100%;max-width:100%;overflow-x:clip;scroll-padding-top:76px}
+body{width:100%;max-width:100%;overflow-x:clip}
+img,svg,video,canvas{max-width:100%}
+.wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}
+main,.section,.connected-route,.workspace,.panel,.tab-panel{min-width:0;max-width:100%}
+p,h1,h2,h3,h4,small,strong,span,a,button,label{overflow-wrap:anywhere}
+button,input,select,textarea{font:inherit;max-width:100%}
+button{touch-action:manipulation}
+.table-wrap{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.table-wrap table{min-width:560px}
+.chart{max-width:100%;overflow:visible}
+.hero-grid>*,.results>*,.workspace>*,.tech-layout>*,.finance-grid>*,.twin-grid>*{min-width:0}
+@media(max-width:950px){
+ .wrap{width:calc(100% - 36px)}
+ .hero-grid{grid-template-columns:minmax(0,1fr)}
+ .results,.tech-layout,.finance-grid{grid-template-columns:minmax(0,1fr)}
+ .workspace{grid-template-columns:minmax(0,1fr)}
+ .sidebar{display:flex;flex-wrap:nowrap;align-items:stretch;gap:8px;overflow-x:auto;overflow-y:hidden;padding:10px 12px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+ .side-logo,.side-bottom{display:none}
+ .side-link{flex:0 0 auto;width:auto;min-width:max-content;min-height:42px;margin:0;padding:10px 13px;white-space:nowrap;scroll-snap-align:start}
+ .panel{padding:18px}
+ .formgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .route-track{display:none}
+}
+@media(max-width:650px){
+ html{scroll-padding-top:68px}
+ .wrap{width:calc(100% - 30px)}
+ .nav{position:sticky;top:0}
+ .navin{height:auto;min-height:60px;display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:8px 0}
+ .logo{font-size:18px;gap:7px;min-width:0}
+ .logo-mark{width:28px;height:28px;flex:0 0 28px}
+ .logo span:last-child{display:none}
+ .nav .btn{margin-left:auto;min-height:40px;padding:8px 11px;font-size:11px;white-space:nowrap}
+ .links{display:flex;order:3;flex:0 0 100%;width:100%;min-width:0;gap:17px;margin:0;padding:2px 0 5px;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+ .links::-webkit-scrollbar{display:none}
+ .links a{flex:0 0 auto;font-size:11px}
+ .hero{padding:34px 0 28px}
+ .hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+ .hero h1{font-size:clamp(32px,9vw,44px);line-height:1.08;letter-spacing:-1.4px;margin:12px 0}
+ .hero .lead,.hero p{font-size:14px;line-height:1.55}
+ .hero .actions{display:grid;grid-template-columns:minmax(0,1fr);gap:9px}
+ .hero .actions>a,.hero .actions .btn{width:100%;min-height:46px;justify-content:center;text-align:center}
+ .hero-art{width:100%;max-width:440px;min-height:0;margin:8px auto 0}
+ .hero-network{width:100%;height:auto;border-radius:14px}
+ .proof-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:16px 0}
+ .proof-grid>*{min-width:0}
+ .proof-grid strong{font-size:clamp(20px,6vw,27px)}
+ .section{padding:38px 0}
+ .section h2{font-size:clamp(25px,7vw,32px);line-height:1.15;letter-spacing:-.8px}
+ .section-intro{font-size:13px;line-height:1.5}
+ .market-grid,.module-grid,.cards,.metrics{grid-template-columns:minmax(0,1fr)}
+ .market-card,.module-card{min-height:0;padding:17px}
+ .market-card p,.module-card p{min-height:0;font-size:13px}
+ .market-flow{display:grid;grid-template-columns:minmax(0,1fr);gap:7px;padding:13px}
+ .market-flow i{transform:rotate(90deg);justify-self:start}
+ .route-section{padding-top:12px}
+ .route-scene{padding:12px 10px 20px;border-radius:18px}
+ .connected-route .hero{padding-bottom:8px}
+ .connected-route .route-section{padding-top:12px}
+ .connected-route #route-title{width:100%;max-width:100%;margin:0 0 16px;padding:0;text-align:left;font-size:25px;background:transparent}
+ .connected-route .route-cards{display:grid;grid-template-columns:minmax(0,1fr)!important;gap:12px}
+ .connected-route .route-card,.connected-route .route-card:nth-child(even),.connected-route .route-card.route-active{display:grid;grid-template-columns:88px minmax(0,1fr);grid-template-rows:auto auto;align-items:center;justify-items:stretch;gap:4px 12px;margin:0;padding:11px;border:1px solid #dce8fb;border-radius:15px;background:#fff;text-align:left;min-width:0}
+ .connected-route .route-view{grid-column:1;grid-row:1/3;width:88px;height:88px;margin:0;border-radius:11px;overflow:hidden}
+ .connected-route .route-view .route-art{width:100%;height:100%;transform:none;object-fit:contain}
+ .connected-route .route-card strong{grid-column:2;font-size:15px;line-height:1.25}
+ .connected-route .route-card p{grid-column:2;font-size:12px;line-height:1.4;margin:0}
+ .connected-route .route-card details{grid-column:1/-1}
+ .connected-route .route-card::before{display:none}
+ .how-steps{grid-template-columns:minmax(0,1fr);gap:12px;margin:20px 0;padding:0}
+ .how-steps li{display:grid;grid-template-columns:82px minmax(0,1fr);grid-template-rows:auto auto;gap:4px 12px;padding:13px}
+ .how-steps img{grid-column:1;grid-row:1/3;width:82px;height:82px;max-height:82px;margin:0}
+ .how-steps span{grid-column:2;align-self:end;width:max-content;max-width:100%}
+ .how-steps h3{grid-column:2;font-size:15px;margin:2px 0}
+ .how-steps p{grid-column:2;font-size:12px}
+ .ecosystem-stage{display:flex;flex-direction:column;gap:10px;padding:14px;margin-top:20px}
+ .eco-core{order:0;width:112px;height:112px;flex:0 0 112px}
+ .eco-node{width:100%;padding:13px}
+ .eco-node b{font-size:14px}
+ .tech-layout,.finance-grid,.twin-grid{grid-template-columns:minmax(0,1fr);gap:12px}
+ .tech-layer{align-items:flex-start;padding:12px;gap:10px}
+ .tech-layer>span{flex-basis:34px;height:34px}
+ .tech-aside,.finance-main,.finance-side{min-width:0;padding:17px}
+ .finance-main{min-height:0}
+ .finance-main strong{font-size:clamp(34px,10vw,48px);overflow-wrap:anywhere}
+ .finance-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .finance-kpis article{min-width:0;padding:11px}
+ .pricing{grid-template-columns:minmax(0,1fr)}
+ #pricing .pricing{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,88%);gap:10px;padding:2px 2px 12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+ #pricing .plan{min-width:0;width:100%;padding:18px;scroll-snap-align:start}
+ #pricing .plan.featured{transform:none}
+ .footer{padding:30px 0}
+ .footgrid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+ /* Interactive demo */
+ #demo .panel{padding:12px;border-radius:16px}
+ #demo .sidebar{display:flex;flex-wrap:nowrap;gap:7px;padding:9px;overflow-x:auto}
+ #demo .side-link{flex:0 0 auto;min-width:max-content;width:auto;min-height:42px;padding:9px 11px;font-size:11px}
+ #demo .panelhead{display:flex;flex-direction:column;align-items:flex-start;gap:7px;margin-bottom:12px}
+ #demo .panelhead h3{font-size:20px;line-height:1.2}
+ #demo .panelhead p{font-size:12px}
+ #demo .box{padding:12px;margin-top:10px}
+ #demo .formgrid{grid-template-columns:minmax(0,1fr)!important;gap:10px}
+ #demo .field{min-width:0}
+ #demo .field input,#demo .field select,#demo .field textarea{width:100%;min-height:44px}
+ #demo .checkrow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+ #demo .chip{min-width:0;padding:9px;font-size:11px}
+ #demo .calc-actions{display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+ #demo .calc-actions .btn{width:100%;min-height:46px;justify-content:center}
+ #demo .results{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+ #demo .map-title-row{align-items:flex-start}
+ #demo .map-title-row h4{font-size:15px;line-height:1.3}
+ #demo .map-toolbar{grid-template-columns:minmax(0,1fr)!important;gap:8px;margin:12px 0}
+ #demo .map-toolbar input,#demo .map-toolbar select,#demo .map-toolbar button{width:100%;min-width:0;min-height:44px;font-size:13px}
+ #demo .map-toolbar input,#demo .map-toolbar .map-reset{grid-column:auto}
+ #demo .geo-map{width:100%;aspect-ratio:1.65/1!important;min-height:155px!important;height:auto!important;border-radius:12px}
+ #demo .geo-map-layer{inset:0!important;background-size:100% 100%!important;background-position:center!important}
+ #demo .geo-map-counter{top:7px;left:7px;padding:5px 8px;font-size:9px}
+ #demo .geo-legend{left:7px;right:7px;bottom:7px;max-width:none;display:flex;justify-content:center;flex-wrap:wrap;gap:7px;padding:6px 7px;font-size:9px}
+ #demo .geo-legend i{width:7px;height:7px}
+ #demo .geo-pin{width:9px;height:9px}
+ #demo .geo-pin.active{width:14px;height:14px}
+ #demo .geo-cluster{width:27px;height:27px;font-size:10px}
+ #demo .geo-insight{padding:13px}
+ #demo .geo-insight .geo-facts{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+ #demo .geo-insight .geo-facts span{min-width:0;padding:7px 5px;font-size:10px;overflow-wrap:anywhere}
+ #demo .geo-insight .geo-facts b{font-size:12px}
+ #demo .geo-results{grid-template-columns:minmax(0,1fr)!important;max-height:320px}
+ #demo .geo-result{padding:12px}
+ #demo .stats3{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ #demo .stat{min-width:0;padding:11px}
+ #demo .table-wrap table{min-width:560px}
+ #demo .chart{width:100%;height:auto;min-height:0}
+ .twin-toolbar{gap:7px;padding:10px}
+ .twin-toolbar select,.twin-toolbar input{flex:1 1 130px;max-width:100%;min-width:0;min-height:42px}
+ .twin-stage{min-height:0}
+ .twin-stage svg{width:100%;height:auto;min-height:0}
+ .twin-grid{display:grid;grid-template-columns:minmax(0,1fr)}
+ .twin-info{min-width:0;padding:12px}
+ .twin-stock{min-width:540px}
+ .geo-book-actions{display:grid;grid-template-columns:minmax(0,1fr)}
+ #demo .geo-book-actions button{width:100%;min-height:44px}
+ .modalback{padding:12px}
+ .modal{width:100%;max-width:100%;max-height:calc(100dvh - 24px);padding:18px;border-radius:16px}
+ .modal input,.modal select,.modal textarea{width:100%;min-height:44px}
+}
+@media(max-width:390px){
+ .wrap{width:calc(100% - 24px)}
+ .nav .btn{font-size:10px;padding:8px 9px}
+ .logo{font-size:16px}
+ .hero h1{font-size:32px}
+ .section h2{font-size:25px}
+ .proof-grid{gap:8px}
+ .proof-grid strong{font-size:21px}
+ .connected-route .route-card,.connected-route .route-card:nth-child(even),.connected-route .route-card.route-active{grid-template-columns:72px minmax(0,1fr);padding:9px;gap:4px 9px}
+ .connected-route .route-view{width:72px;height:72px}
+ #demo .geo-map{aspect-ratio:1.5/1!important;min-height:145px!important}
+ #demo .geo-insight .geo-facts{grid-template-columns:1fr}
+ #demo .checkrow{grid-template-columns:minmax(0,1fr)}
+}
+@media(prefers-reduced-motion:reduce){.links,.sidebar,#pricing .pricing{scroll-behavior:auto}}
 </style></head><body>
 <header class="nav"><div class="wrap navin"><a class="logo" href="#top"><span class="logo-mark">◆</span>RESERVE<span style="color:#5e95ed;font-size:12px;letter-spacing:1px">SMART NETWORK</span></a><nav class="links"><a href="#market">Рынок</a><a href="#modules">Решение</a><a href="#demo">Карта и демо</a><a href="#economy">Экономика</a><a href="#pricing">Тарифы</a></nav><button class="btn sm" onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">Открыть демо ↗</button></div></header>
 <main id="top"><div class="connected-route"><div class="route-track" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg"><path class="track-rim"/><path class="track-asphalt"/><path class="track-line"/><image class="track-truck" href="data:image/webp;base64,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" x="-24" y="-13" width="48" height="26"/></svg></div><section class="hero"><div class="wrap hero-grid"><div><h1>Ваш товар.<br>Лучший склад.<br><em>Выгода в цифрах.</em></h1><p class="lead">RESERVE подбирает совместимые склады, сравнивает полные логистические затраты и помогает перейти от расчёта к сделке.</p><div class="actions"><a class="btn" href="#demo">Найти склад →</a><a class="btn alt" href="#how">Как это работает</a></div></div>
