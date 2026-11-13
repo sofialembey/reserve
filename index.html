@@ -1543,7 +1543,7 @@ input,select,textarea{
 <script>
 const wh=[{name:'Склад А',location:'Северо-запад',storage:450,handling:210,transport:330,capacity:320,orders:300,cold:false},{name:'Склад Б',location:'Восток',storage:540,handling:135,transport:210,capacity:480,orders:600,cold:true},{name:'Склад В',location:'Юг',storage:495,handling:165,transport:270,capacity:260,orders:250,cold:false}];let selected=1;
 const fmt=n=>Math.round(n).toLocaleString('ru-RU')+' ₽';const el=id=>document.getElementById(id);
-function showTab(t){document.querySelectorAll('.tab-panel').forEach(x=>x.classList.toggle('active',x.id==='tab-'+t));document.querySelectorAll('.side-link').forEach(x=>x.classList.toggle('active',x.dataset.tab===t));if(t==='forecast')forecast();if(t==='search'&&!el('geo-map-layer').childElementCount)renderGeoMap();if(t==='twin'&&!el('twin-svg').childElementCount)twinRender();}
+function showTab(t){document.querySelectorAll('.tab-panel').forEach(x=>x.classList.toggle('active',x.id==='tab-'+t));document.querySelectorAll('.side-link').forEach(x=>x.classList.toggle('active',x.dataset.tab===t));if(t==='forecast')forecast();if(t==='search'&&!el('geo-map-layer').childElementCount)renderGeoMap();if(t==='twin'&&!el('twin-svg').childElementCount)twinRender();if(t==='booking')updateBookingSummary();}
 document.querySelectorAll('.side-link').forEach(x=>x.addEventListener('click',()=>showTab(x.dataset.tab)));
 function eligible(w){return Number(el('pallets').value)<=w.capacity&&Number(el('orders').value)<=w.orders&&(el('temp').value!=='cold'||w.cold)}
 function choose(i){selected=i;document.querySelectorAll('.pin').forEach(x=>x.classList.toggle('sel',Number(x.dataset.wh)===i));renderList()}
