@@ -1272,7 +1272,98 @@ input,select,textarea{
 @media(prefers-reduced-motion:no-preference){#top .spatial-panel{animation:spatialFloat 7s ease-in-out infinite}#top .panel-flow{animation-delay:-2.3s}#top .panel-economy{animation-delay:-4.5s}@keyframes spatialFloat{0%,100%{translate:0 0}50%{translate:0 -5px}}}
 @media(prefers-reduced-motion:reduce){#top .spatial-panel{animation:none!important}}
 </style>
-</head><body>
+
+<style id="reserve-demo-workspace-v4">
+/* Detailed demo workspace refinements — visual layer only */
+#demo .workspace{gap:16px!important;padding:16px!important}
+#demo .sidebar{align-content:start;gap:7px!important}
+#demo .side-link{min-height:48px!important;text-align:left!important;font-weight:600!important;font-size:12px!important}
+#demo .side-link:before{content:"";display:inline-block;width:6px;height:6px;margin:0 9px 1px 1px;border-radius:50%;background:#b8d9ee}
+#demo .side-link.active:before{background:#318ed1;box-shadow:0 0 0 4px rgba(49,142,209,.12)}
+#demo .panel{min-height:560px!important}
+#demo .tab-panel.active{animation:demoPanelIn .28s ease both}
+@keyframes demoPanelIn{from{opacity:.35;translate:0 5px}to{opacity:1;translate:0 0}}
+#demo .panelhead{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding-bottom:18px!important;margin-bottom:18px!important;border-bottom:1px solid rgba(122,177,211,.2)!important}
+#demo .panelhead h3{font-size:clamp(20px,2vw,27px)!important;letter-spacing:-.035em!important}
+#demo .panelhead p{font-size:12px!important;line-height:1.6!important}
+#demo .panelhead .tag{white-space:nowrap!important;font-size:10px!important}
+#tab-search .calc-box{padding:clamp(16px,2vw,25px)!important}
+#tab-search .calc-head{margin-bottom:20px!important}
+#tab-search .formgrid{gap:14px!important}
+#tab-search .field label{font-size:11px!important;font-weight:650!important;margin-bottom:7px!important}
+#tab-search .field input,#tab-search .field select{min-height:43px!important;padding:10px 12px!important}
+#tab-search .chip{background:rgba(233,247,255,.8)!important;color:#477b9e!important;border:1px solid rgba(139,196,229,.35)!important;border-radius:999px!important;padding:8px 12px!important}
+#tab-search .chip input{accent-color:#318ed1!important}
+#tab-search .calc-actions{display:flex!important;align-items:center!important;gap:14px!important;flex-wrap:wrap!important;margin-top:18px!important}
+#tab-search .results{gap:14px!important}
+#tab-search .map-title-row{align-items:center!important;gap:12px!important;margin-bottom:14px!important}
+#tab-search .map-title-row h4{font-size:15px!important;letter-spacing:-.02em!important}
+#tab-search .map-toolbar{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important;margin-bottom:12px!important}
+#tab-search .map-toolbar input{grid-column:1/-1!important}
+#tab-search .map-toolbar input,#tab-search .map-toolbar select{min-width:0!important;width:100%!important;min-height:39px!important;padding:8px 10px!important;font-size:11px!important}
+#tab-search .map-reset{border-radius:10px!important;background:#edf8ff!important;color:#347ca9!important;border:1px solid #d3ebf9!important}
+#tab-search .geo-map{min-height:290px!important;border-radius:17px!important;overflow:hidden!important;box-shadow:inset 0 1px 0 #fff!important}
+#tab-search .geo-map-layer{border-radius:inherit!important}
+#tab-search .geo-result{background:rgba(255,255,255,.82)!important;border:1px solid rgba(128,184,219,.28)!important;color:#315f7f!important;box-shadow:0 5px 16px rgba(70,128,166,.045)!important}
+#tab-search .geo-result:hover,#tab-search .geo-result.active{background:#f0f9ff!important;border-color:#72c5ff!important}
+#tab-search .geo-result strong,#tab-search .wh b{color:#244f70!important}
+#tab-search .geo-result small,#tab-search .geo-result .mini,#tab-search .wh small{color:#7893ab!important}
+#tab-search .geo-result b,#tab-search .wh .price{color:#2787c2!important}
+#tab-search .geo-empty{background:rgba(255,255,255,.8)!important;color:#7893ab!important;border-color:#cde6f6!important}
+#tab-search .wh{background:rgba(255,255,255,.8)!important;border:1px solid rgba(128,184,219,.28)!important}
+#tab-search .wh.selected{background:#eff9ff!important;border-color:#72c5ff!important;box-shadow:inset 3px 0 #318ed1!important}
+#tab-search .wh .tag{background:#e7f8f1!important;color:#218c6d!important;border-color:#c9eee0!important}
+#tab-economics .box,#tab-forecast .box,#tab-owner .box,#tab-legal .box{padding:clamp(16px,2vw,24px)!important}
+#tab-economics .row{align-items:center!important;flex-wrap:wrap!important}
+#tab-economics table,#tab-legal table{width:100%!important;border-collapse:separate!important;border-spacing:0!important;overflow:hidden!important;border-radius:13px!important}
+#tab-economics th,#tab-legal th{font-size:10px!important;text-transform:uppercase!important;letter-spacing:.07em!important}
+#tab-economics td,#tab-legal td{padding:13px 12px!important;font-size:12px!important}
+#tab-economics td.best{background:#e9f7ff!important;color:#176da5!important;font-weight:750!important}
+#tab-economics .stats3,#tab-forecast .stats3{gap:10px!important;margin-top:18px!important}
+#tab-economics .stat,#tab-forecast .stat,#tab-owner .stat{padding:16px!important;background:linear-gradient(145deg,rgba(255,255,255,.92),rgba(237,248,255,.8))!important;border:1px solid #fff!important;border-radius:15px!important}
+#tab-economics .stat small,#tab-forecast .stat small,#tab-owner .stat small{display:block;color:#7893ab!important;font-size:10px!important;margin-bottom:6px!important}
+#tab-economics .stat b,#tab-forecast .stat b,#tab-owner .stat b{color:#246e9b!important;font-size:clamp(16px,1.8vw,22px)!important}
+#tab-economics .positive{color:#198a70!important}
+#tab-economics .notice,#tab-owner .notice,#tab-legal .notice{background:#eff9ff!important;color:#527c98!important;border:1px solid #d8effc!important;border-radius:13px!important;padding:14px 16px!important}
+#tab-economics #bars,#tab-forecast #forecast-chart{width:100%!important;height:auto!important;min-height:190px!important;overflow:visible!important}
+#tab-economics #bars text,#tab-forecast #forecast-chart text{fill:#66849c!important;font-size:12px!important;font-family:Inter,Arial,sans-serif!important}
+#tab-economics #bars rect{fill:#9acfed!important}
+#tab-economics #bars rect[fill="#2a69e6"]{fill:#318ed1!important}
+#tab-forecast input[type=range]{accent-color:#318ed1!important}
+#tab-forecast .field{margin:22px 0!important}
+#tab-forecast .field label{display:flex!important;justify-content:space-between!important;color:#557b96!important}
+#tab-forecast .field label b{color:#318ed1!important}
+#tab-forecast #forecast-chart polyline{stroke:#318ed1!important}
+#tab-forecast #forecast-chart circle{fill:#318ed1!important}
+#tab-twin .twin-kpis{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:10px!important;margin-bottom:16px!important}
+#tab-twin .twin-kpi{background:linear-gradient(145deg,rgba(255,255,255,.9),rgba(235,247,255,.8))!important;border:1px solid #fff!important;border-radius:16px!important;padding:16px!important}
+#tab-twin .twin-kpi strong{color:#287fb1!important;font-size:clamp(20px,2vw,28px)!important}
+#tab-twin .twin-kpi span{color:#7893ab!important}
+#tab-twin .twin-toolbar{display:flex!important;flex-wrap:wrap!important;gap:9px!important;align-items:center!important;padding:13px!important;background:rgba(239,249,255,.85)!important;border:1px solid #fff!important;border-radius:15px!important}
+#tab-twin .twin-toolbar strong{color:#315f7f!important}
+#tab-twin .twin-toolbar select,#tab-twin .twin-toolbar input{min-height:38px!important;border-radius:10px!important;border:1px solid #d6eaf7!important;padding:8px 10px!important}
+#tab-twin .twin-stage{border:1px solid #fff!important;border-radius:17px!important;min-height:340px!important;overflow:hidden!important}
+#tab-twin #twin-svg{width:100%!important;height:auto!important;min-height:310px!important}
+#tab-twin .twin-legend{color:#7893ab!important;display:flex!important;gap:13px!important;flex-wrap:wrap!important;padding:12px 4px!important;font-size:10px!important}
+#tab-twin .twin-info{background:rgba(255,255,255,.82)!important;border:1px solid #fff!important;border-radius:17px!important;padding:18px!important}
+#tab-twin .twin-info h4{color:#315f7f!important;font-size:14px!important}
+#tab-twin .twin-stock{min-width:480px!important}
+#tab-twin .twin-stock th{background:#edf8ff!important;color:#477b9e!important}
+#tab-twin .twin-stock td{color:#557891!important}
+#tab-twin #twin-detail{color:#547995!important;line-height:1.8!important}
+#tab-twin .notice{background:#eff9ff!important;color:#66849c!important;border:1px solid #d8effc!important}
+#tab-owner .stats3{gap:10px!important;margin-bottom:16px!important}
+#tab-owner #capacity-bars>div>div{background:linear-gradient(180deg,#8ed4f7,#318ed1)!important;border-radius:7px 7px 0 0!important}
+#tab-owner #capacity-bars>div:nth-child(4)>div{background:linear-gradient(180deg,#f4c77d,#e5a94c)!important}
+#tab-owner #capacity-bars small{color:#7893ab!important}
+#tab-legal .timeline{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:9px!important;background:transparent!important;box-shadow:none!important;border:0!important;padding:0!important}
+#tab-legal .timeline .step{min-width:0!important;background:linear-gradient(145deg,#fff,#f0f9ff)!important;border:1px solid #fff!important;border-radius:15px!important;padding:15px 12px!important;box-shadow:0 8px 22px rgba(67,128,167,.07)!important}
+#tab-legal .timeline .step b{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:9px;background:#e3f4ff;color:#318ed1!important;margin-bottom:10px}
+#tab-legal .timeline .step p{font-size:11px!important;color:#66849c!important;line-height:1.5!important}
+@media(max-width:900px){#tab-legal .timeline{grid-template-columns:repeat(3,minmax(0,1fr))!important}#tab-twin .twin-kpis{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:650px){#demo .panelhead{display:block!important}#demo .panelhead .tag{display:inline-flex!important;margin-top:10px!important}#tab-search .map-toolbar{grid-template-columns:repeat(2,minmax(0,1fr))!important}#tab-search .geo-map{min-height:240px!important}#tab-economics td,#tab-legal td{padding:10px 8px!important;font-size:11px!important}#tab-legal .timeline{grid-template-columns:repeat(2,minmax(0,1fr))!important}#tab-twin .twin-kpis{grid-template-columns:repeat(2,minmax(0,1fr))!important}#tab-twin .twin-stage{min-height:250px!important}#tab-twin #twin-svg{min-height:240px!important}}
+@media(prefers-reduced-motion:reduce){#demo .tab-panel.active{animation:none!important}}
+</style></head><body>
 <header class="nav"><div class="wrap navin"><a class="logo" href="#top"><span class="logo-mark">◆</span>RESERVE<span style="color:#5e95ed;font-size:12px;letter-spacing:1px">SMART NETWORK</span></a><nav class="links"><a href="#modules">Решение</a><a href="#demo">Карта и демо</a><a href="#pricing">Тарифы</a></nav><button class="btn sm" onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">Открыть демо ↗</button></div></header>
 <main id="top"><div class="connected-route"><section class="hero" aria-labelledby="hero-title">
  <div class="wrap">
@@ -1493,14 +1584,14 @@ function warehouseRack(x,y,color,status,code){
     <rect x="10" y="42" width="40" height="19" rx="5" fill="${color[2]}" stroke="${color[1]}"/>
     <text x="30" y="56" text-anchor="middle" font-size="13" font-weight="800" fill="#10294d">${code}</text></g>`;
 }
-function twinRender(){let zone=document.getElementById('twin-zone').value,q=document.getElementById('twin-search').value.toLowerCase();let svg=document.getElementById('twin-svg');let out=`<defs><linearGradient id="crateFace" x2="0" y2="1"><stop stop-color="#e9be83"/><stop offset="1" stop-color="#cf9d63"/></linearGradient><linearGradient id="steelBeam"><stop stop-color="#1c4074"/><stop offset=".55" stop-color="#417cbd"/><stop offset="1" stop-color="#244f87"/></linearGradient><linearGradient id="twinFloor" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#173653"/><stop offset="1" stop-color="#0d2740"/></linearGradient><filter id="twinShadow"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#3a6eac" flood-opacity=".17"/></filter></defs>`;
+function twinRender(){let zone=document.getElementById('twin-zone').value,q=document.getElementById('twin-search').value.toLowerCase();let svg=document.getElementById('twin-svg');let out=`<defs><linearGradient id="crateFace" x2="0" y2="1"><stop stop-color="#e9be83"/><stop offset="1" stop-color="#cf9d63"/></linearGradient><linearGradient id="steelBeam"><stop stop-color="#8fc9ed"/><stop offset=".55" stop-color="#4b9bd0"/><stop offset="1" stop-color="#327eae"/></linearGradient><linearGradient id="twinFloor" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eaf6ff"/><stop offset="1" stop-color="#d9efff"/></linearGradient><filter id="twinShadow"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#3a6eac" flood-opacity=".17"/></filter></defs>`;
 out+=twinPoly('55,252 422,469 850,260 850,274 422,484 55,266','#a3b9d4','#8ea9ca');
 out+=twinPoly('55,252 488,52 850,260 422,469','url(#twinFloor)','#b8d1ef');
 for(let k=0;k<9;k++){let x=95+k*76;out+=`<path d="M${x} ${230-k*11} l230 128" stroke="#5f91b7" stroke-width="1" stroke-dasharray="5 8" opacity=".45"/>`}
-out+=`<text x="75" y="70" fill="#a5dfff" font-size="18" font-weight="800">RESERVE · DIGITAL WAREHOUSE</text>`;
+out+=`<text x="75" y="70" fill="#477b9e" font-size="18" font-weight="800">RESERVE · DIGITAL WAREHOUSE</text>`;
 // Building outlines and loading bays
 out+=twinPoly('540,117 683,48 820,124 677,194','#e7f1ff','#b4cdec')+twinPoly('677,194 820,124 820,170 677,241','#c3d9f7','#b4cdec')+twinPoly('540,117 677,194 677,241 540,163','#dceafe','#b4cdec');
-for(let j=0;j<3;j++){let x=690+j*40,y=184-j*20;out+=twinPoly(`${x},${y} ${x+29},${y-14} ${x+29},${y+20} ${x},${y+34}`,'#273e5c','#87a8cd')}
+for(let j=0;j<3;j++){let x=690+j*40,y=184-j*20;out+=twinPoly(`${x},${y} ${x+29},${y-14} ${x+29},${y+20} ${x},${y+34}`,'#e5f3fc','#8bbbd9')}
 // racks in four zones, two rows of two
 const anchors=[[177,154],[382,153],[219,295],[449,295]];
 const racks=twinItems.map((item,i)=>{
