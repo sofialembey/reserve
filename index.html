@@ -372,7 +372,7 @@ function renderGeoMap(){
  const filtered=geoWarehouses.filter(geoMatches);
  if(!filtered.some(w=>w.id===geoSelected)&&filtered.length)geoSelected=filtered[0].id;
  const map=document.getElementById('geo-map'),width=map?.clientWidth||800,height=map?.clientHeight||300;
- const points=filtered.map(w=>({...w,x:(w.lon-19)/172*width,y:(80-w.lat)/44*height}));
+ const points=filtered.map(w=>({...w,x:(w.lon-19)/172*width,y:Math.max(16,Math.min(80,16+((80-w.lat)/40)*64))/100*height}));
  const groups=[];
  points.forEach(p=>{
    let group=groups.find(g=>Math.hypot(g.x-p.x,g.y-p.y)<(width<600?24:30));
