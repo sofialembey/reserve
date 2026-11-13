@@ -1410,11 +1410,11 @@ function warehouseRack(x,y,color,status,code){
     <rect x="10" y="42" width="40" height="19" rx="5" fill="${color[2]}" stroke="${color[1]}"/>
     <text x="30" y="56" text-anchor="middle" font-size="13" font-weight="800" fill="#10294d">${code}</text></g>`;
 }
-function twinRender(){let zone=document.getElementById('twin-zone').value,q=document.getElementById('twin-search').value.toLowerCase();let svg=document.getElementById('twin-svg');let out=`<defs><linearGradient id="crateFace" x2="0" y2="1"><stop stop-color="#e9be83"/><stop offset="1" stop-color="#cf9d63"/></linearGradient><linearGradient id="steelBeam"><stop stop-color="#1c4074"/><stop offset=".55" stop-color="#417cbd"/><stop offset="1" stop-color="#244f87"/></linearGradient><linearGradient id="twinFloor" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7fbff"/><stop offset="1" stop-color="#dbe9fa"/></linearGradient><filter id="twinShadow"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#3a6eac" flood-opacity=".17"/></filter></defs>`;
+function twinRender(){let zone=document.getElementById('twin-zone').value,q=document.getElementById('twin-search').value.toLowerCase();let svg=document.getElementById('twin-svg');let out=`<defs><linearGradient id="crateFace" x2="0" y2="1"><stop stop-color="#e9be83"/><stop offset="1" stop-color="#cf9d63"/></linearGradient><linearGradient id="steelBeam"><stop stop-color="#1c4074"/><stop offset=".55" stop-color="#417cbd"/><stop offset="1" stop-color="#244f87"/></linearGradient><linearGradient id="twinFloor" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#173653"/><stop offset="1" stop-color="#0d2740"/></linearGradient><filter id="twinShadow"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#3a6eac" flood-opacity=".17"/></filter></defs>`;
 out+=twinPoly('55,252 422,469 850,260 850,274 422,484 55,266','#a3b9d4','#8ea9ca');
 out+=twinPoly('55,252 488,52 850,260 422,469','url(#twinFloor)','#b8d1ef');
-for(let k=0;k<9;k++){let x=95+k*76;out+=`<path d="M${x} ${230-k*11} l230 128" stroke="#c9daf0" stroke-width="1" stroke-dasharray="5 8" opacity=".7"/>`}
-out+=`<text x="75" y="70" fill="#7c9ac0" font-size="18" font-weight="800">RESERVE · DIGITAL WAREHOUSE</text>`;
+for(let k=0;k<9;k++){let x=95+k*76;out+=`<path d="M${x} ${230-k*11} l230 128" stroke="#5f91b7" stroke-width="1" stroke-dasharray="5 8" opacity=".45"/>`}
+out+=`<text x="75" y="70" fill="#a5dfff" font-size="18" font-weight="800">RESERVE · DIGITAL WAREHOUSE</text>`;
 // Building outlines and loading bays
 out+=twinPoly('540,117 683,48 820,124 677,194','#e7f1ff','#b4cdec')+twinPoly('677,194 820,124 820,170 677,241','#c3d9f7','#b4cdec')+twinPoly('540,117 677,194 677,241 540,163','#dceafe','#b4cdec');
 for(let j=0;j<3;j++){let x=690+j*40,y=184-j*20;out+=twinPoly(`${x},${y} ${x+29},${y-14} ${x+29},${y+20} ${x},${y+34}`,'#273e5c','#87a8cd')}
@@ -1840,5 +1840,80 @@ p,li,.section-intro,.lead{color:var(--r-muted)}
  #demo .twin-grid{grid-template-columns:minmax(0,1fr)!important}
  #demo .timeline{grid-template-columns:minmax(0,1fr)!important}
  #demo table{min-width:520px!important}
+}
+</style>
+<style id="reserve-module-signatures-v3">
+/* Smart Economics — analytical console */
+#tab-economics>.box:first-of-type{
+ background:linear-gradient(145deg,rgba(85,185,245,.075),rgba(255,255,255,.025))!important;
+ border-color:rgba(105,194,247,.22)!important;
+}
+#tab-economics>.box:first-of-type>.row{
+ display:flex!important;align-items:center!important;justify-content:space-between!important;
+ gap:16px!important;margin-bottom:22px!important;padding-bottom:18px!important;
+ border-bottom:1px solid rgba(255,255,255,.10)!important;
+}
+#tab-economics .row h4{font-size:18px!important;letter-spacing:-.025em!important}
+#tab-economics .row select{width:auto!important;min-width:150px!important}
+#tab-economics .table-wrap{margin:8px 0 20px!important;border:1px solid rgba(255,255,255,.09)!important}
+#tab-economics table{min-width:620px!important}
+#tab-economics th{font-size:10px!important;text-transform:uppercase!important;letter-spacing:.11em!important;color:#8ebcdd!important;background:rgba(85,185,245,.055)!important}
+#tab-economics td{font-size:13px!important}
+#tab-economics td strong{color:#e8f5ff!important}
+#tab-economics td.best{background:rgba(85,185,245,.09)!important;color:#a5dfff!important;font-weight:700!important}
+#tab-economics .stats3{margin-top:22px!important}
+#tab-economics .stat{border:1px solid rgba(255,255,255,.10)!important;background:rgba(255,255,255,.035)!important}
+#tab-economics .stat:first-child{border-color:rgba(85,185,245,.25)!important;background:rgba(85,185,245,.07)!important}
+#tab-economics .notice{margin-top:18px!important;background:rgba(85,185,245,.07)!important;border:1px solid rgba(85,185,245,.16)!important;color:#c8e6fa!important}
+#tab-economics>.box:nth-of-type(2){margin-top:18px!important;background:rgba(255,255,255,.025)!important}
+#tab-economics>.box:nth-of-type(2) h4{font-size:16px!important;margin-bottom:14px!important}
+#tab-economics #bars{overflow:visible!important}
+#tab-economics #bars text{fill:#c4d9eb!important;font-family:Inter,Arial,sans-serif!important;font-size:12px!important}
+#tab-economics #bars line{stroke:rgba(255,255,255,.16)!important}
+/* Digital Twin — dark spatial visualization console */
+#tab-twin .twin-kpis{gap:12px!important;margin-bottom:20px!important}
+#tab-twin .twin-kpi{position:relative!important;overflow:hidden!important;background:linear-gradient(145deg,rgba(85,185,245,.085),rgba(255,255,255,.025))!important;border-color:rgba(125,199,245,.17)!important}
+#tab-twin .twin-kpi:after{content:"";position:absolute;right:-28px;top:-32px;width:90px;height:90px;border-radius:50%;background:rgba(85,185,245,.08);filter:blur(2px)}
+#tab-twin .twin-toolbar{padding:14px!important;border:1px solid rgba(255,255,255,.10)!important;border-radius:17px!important;background:rgba(255,255,255,.025)!important}
+#tab-twin .twin-toolbar strong{color:#dff3ff!important;font-size:13px!important}
+#tab-twin .twin-toolbar select,#tab-twin .twin-toolbar input{width:auto!important;min-width:150px!important;flex:1 1 150px!important}
+#tab-twin .twin-btn{border:1px solid rgba(85,185,245,.25)!important;border-radius:11px!important;background:rgba(85,185,245,.10)!important;color:#bce7ff!important;padding:11px 14px!important}
+#tab-twin .twin-stage{position:relative!important;border:1px solid rgba(113,192,245,.18)!important;background:radial-gradient(ellipse at 50% 40%,rgba(39,108,163,.20),transparent 65%),linear-gradient(145deg,#0b2037,#071525)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)!important}
+#tab-twin .twin-stage:before{content:"LIVE MODEL / DEMO DATA";position:absolute;top:15px;left:17px;z-index:2;color:#79bde9;font-size:9px;letter-spacing:.16em;font-weight:700;pointer-events:none}
+#tab-twin #twin-svg{width:100%!important;height:auto!important;display:block!important}
+#tab-twin #twin-svg text{font-family:Inter,Arial,sans-serif!important}
+#tab-twin .twin-legend{display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:12px 18px!important;padding:15px 4px 2px!important;color:#9db4ca!important;font-size:11px!important}
+#tab-twin .twin-legend span:last-child{margin-left:auto!important}
+#tab-twin .twin-grid{gap:16px!important}
+#tab-twin .twin-info{background:rgba(255,255,255,.028)!important;border:1px solid rgba(255,255,255,.10)!important;border-radius:20px!important;padding:20px!important}
+#tab-twin .twin-info h4{font-size:15px!important;color:#dceeff!important;margin-bottom:16px!important}
+#tab-twin .twin-stock{min-width:530px!important}
+#tab-twin .twin-stock th{background:rgba(85,185,245,.06)!important;color:#91c7eb!important}
+#tab-twin .twin-stock td{color:#c9d9e9!important}
+#tab-twin #twin-detail{color:#bfd1e2!important;line-height:1.8!important}
+#tab-twin .notice{background:rgba(85,185,245,.055)!important;color:#9fb8ce!important;border:1px solid rgba(85,185,245,.14)!important}
+/* Warehouse owner — operational control room */
+#tab-owner>.stats3{margin:0 0 20px!important}
+#tab-owner>.stats3 .stat{position:relative!important;overflow:hidden!important;min-height:112px!important;padding:20px!important;background:linear-gradient(145deg,rgba(85,185,245,.075),rgba(255,255,255,.025))!important;border:1px solid rgba(85,185,245,.16)!important}
+#tab-owner>.stats3 .stat b{font-size:clamp(24px,2.4vw,34px)!important;color:#dff3ff!important}
+#tab-owner>.box{margin-top:18px!important;background:rgba(255,255,255,.028)!important;border:1px solid rgba(255,255,255,.11)!important;border-radius:22px!important;padding:clamp(18px,2.5vw,30px)!important}
+#tab-owner>.box h4{font-size:17px!important;color:#e5f4ff!important;margin-bottom:20px!important}
+#tab-owner .formgrid{gap:18px!important}
+#tab-owner .field label{color:#a9c1d8!important}
+#tab-owner .notice{margin-top:22px!important;padding:18px!important;line-height:1.8!important;background:rgba(85,185,245,.055)!important;border:1px solid rgba(85,185,245,.15)!important;color:#b8d0e5!important}
+#tab-owner #capacity-bars{height:180px!important;gap:clamp(7px,1.5vw,16px)!important;padding:18px 8px 0!important;border-bottom:1px solid rgba(255,255,255,.12)!important}
+#tab-owner #capacity-bars>div{display:flex!important;flex-direction:column!important;justify-content:flex-end!important;align-items:center!important;gap:10px!important;height:100%!important}
+#tab-owner #capacity-bars>div>div{width:min(100%,48px)!important;min-height:8px!important;border-radius:8px 8px 3px 3px!important;background:linear-gradient(180deg,#78cfff,#2876c8)!important;box-shadow:0 0 18px rgba(66,166,231,.12)!important}
+#tab-owner #capacity-bars small{color:#9fb8ce!important;font-size:10px!important}
+#tab-owner .smallnote{color:#8fa8c0!important;margin-top:14px!important}
+@media(max-width:620px){
+ #tab-economics>.box:first-of-type>.row{align-items:flex-start!important;flex-direction:column!important}
+ #tab-economics .row select{width:100%!important}
+ #tab-economics .stats3{grid-template-columns:minmax(0,1fr)!important}
+ #tab-twin .twin-toolbar{display:grid!important;grid-template-columns:minmax(0,1fr)!important}
+ #tab-twin .twin-toolbar select,#tab-twin .twin-toolbar input{width:100%!important}
+ #tab-twin .twin-legend span:last-child{margin-left:0!important;width:100%!important}
+ #tab-owner>.stats3{grid-template-columns:minmax(0,1fr)!important}
+ #tab-owner #capacity-bars{height:150px!important}
 }
 </style></body></html>
