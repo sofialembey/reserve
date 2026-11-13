@@ -1916,4 +1916,104 @@ p,li,.section-intro,.lead{color:var(--r-muted)}
  #tab-owner>.stats3{grid-template-columns:minmax(0,1fr)!important}
  #tab-owner #capacity-bars{height:150px!important}
 }
-</style></body></html>
+</style>
+<style id="reserve-smart-match-v4">
+/* Smart Match — premium warehouse discovery */
+#tab-search{color:#eaf4ff}
+#tab-search .panelhead{align-items:flex-start;margin-bottom:22px}
+#tab-search .panelhead h3{color:#f4f9ff;font-size:clamp(22px,2.4vw,30px);letter-spacing:-.035em}
+#tab-search .panelhead p{color:#9db4cf;font-size:13px;line-height:1.55}
+#tab-search .panelhead .tag{background:#102b47;border:1px solid #285173;color:#9bdcff;border-radius:999px;padding:8px 12px;white-space:nowrap}
+#tab-search .calc-box,
+#tab-search .reserve-map-box,
+#tab-search .results>.box{background:linear-gradient(145deg,rgba(19,47,75,.86),rgba(8,25,44,.94));border:1px solid rgba(129,190,235,.19);border-radius:22px;box-shadow:0 18px 50px rgba(0,0,0,.16),inset 0 1px rgba(255,255,255,.045);color:#eaf4ff}
+#tab-search .calc-box{padding:clamp(18px,2.5vw,30px);margin-bottom:18px}
+#tab-search .calc-head{gap:15px;margin-bottom:24px}
+#tab-search .calc-icon{width:48px;height:48px;flex-basis:48px;border-radius:15px;background:linear-gradient(145deg,#1b5278,#153650);color:#9bdcff;border:1px solid rgba(130,202,248,.2)}
+#tab-search .calc-head h4{color:#f2f8ff;font-size:19px}
+#tab-search .calc-head p{color:#91a9c3;font-size:12px}
+#tab-search .formgrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:17px 18px}
+#tab-search .calc-box .field label{color:#b9cce0;font-size:12px;font-weight:650;letter-spacing:.01em}
+#tab-search .calc-box .field input,
+#tab-search .calc-box .field select{height:48px;background:rgba(5,19,34,.62);border:1px solid rgba(133,177,215,.23);border-radius:12px;color:#edf7ff;font-size:14px;padding:0 13px}
+#tab-search .calc-box .field select{color-scheme:dark}
+#tab-search .calc-box .field input:focus,
+#tab-search .calc-box .field select:focus{border-color:#62baf0;box-shadow:0 0 0 3px rgba(85,185,245,.13)}
+#tab-search .calc-options{color:#b9cce0;font-size:12px;margin:22px 0 10px}
+#tab-search .checkrow{gap:9px;margin:0 0 20px}
+#tab-search .calc-box .chip{padding:10px 13px;background:rgba(255,255,255,.035);border:1px solid rgba(135,181,219,.2);border-radius:12px;color:#c8d9e9;font-size:12px;font-weight:600}
+#tab-search .calc-box .chip:has(input:checked){background:rgba(72,161,219,.13);border-color:rgba(94,190,245,.48);color:#bde8ff}
+#tab-search .calc-box .chip input{accent-color:#55b9f5}
+#tab-search .calc-actions{border-color:rgba(138,183,221,.17);padding-top:19px}
+#tab-search .calc-actions .btn{min-height:48px;padding:0 20px;border-radius:13px;background:linear-gradient(110deg,#2188c9,#55b9f5);color:#04192b;font-weight:800;box-shadow:0 9px 24px rgba(34,143,205,.2)}
+#tab-search .calc-actions .btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+#tab-search .calc-actions .smallnote{color:#7895b2}
+#tab-search .results{grid-template-columns:minmax(0,1.55fr) minmax(270px,.78fr);gap:18px;align-items:start}
+#tab-search .reserve-map-box{padding:clamp(15px,2vw,23px);min-width:0}
+#tab-search .map-title-row{margin-bottom:15px}
+#tab-search .map-title-row h4,
+#tab-search .results>.box h4{color:#edf6ff;font-size:16px;letter-spacing:-.015em}
+#tab-search .map-title-row .smallnote,
+#tab-search .results>.box .smallnote{color:#8da8c4}
+#tab-search .map-title-row .tag{background:rgba(83,177,229,.1);border:1px solid rgba(99,185,235,.22);color:#9bdcff;border-radius:999px;padding:7px 10px}
+#tab-search .map-toolbar{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:14px 0}
+#tab-search .map-toolbar input,
+#tab-search .map-toolbar select{height:42px;padding:0 11px;background:rgba(4,18,32,.58);border:1px solid rgba(130,174,211,.2);border-radius:11px;color:#dcecff;font-size:12px;color-scheme:dark}
+#tab-search .map-toolbar input::placeholder{color:#7894b0}
+#tab-search .map-toolbar :focus{border-color:#55b9f5;box-shadow:0 0 0 3px rgba(85,185,245,.1)}
+#tab-search .map-toolbar .map-reset{border:1px solid rgba(112,180,225,.24);border-radius:11px;background:rgba(85,185,245,.08);color:#a9dcfa;font-weight:700}
+#tab-search .geo-map{aspect-ratio:2.2/1;min-height:230px;background:#0b2137;border:1px solid rgba(121,183,226,.2);border-radius:17px;box-shadow:inset 0 0 45px rgba(37,108,157,.12)}
+#tab-search .geo-map-layer{filter:saturate(.72) brightness(.72) hue-rotate(165deg);opacity:.78}
+#tab-search .geo-map-counter{background:rgba(5,20,35,.8);border:1px solid rgba(137,190,229,.2);color:#cce8fa;border-radius:10px}
+#tab-search .geo-legend{background:rgba(5,20,35,.8);border:1px solid rgba(137,190,229,.17);border-radius:10px;color:#b8cde0;padding:8px 10px}
+#tab-search .geo-pin{border:2px solid #dff5ff;box-shadow:0 0 0 5px rgba(85,185,245,.13),0 5px 14px rgba(0,0,0,.4)}
+#tab-search .geo-pin.active{background:#38c6a0;box-shadow:0 0 0 7px rgba(56,198,160,.2),0 5px 14px rgba(0,0,0,.4)}
+#tab-search .geo-cluster{background:#1d83bd;border:2px solid #c8edff;color:white;box-shadow:0 5px 18px rgba(0,0,0,.35)}
+#tab-search .geo-insight{margin-top:13px;background:linear-gradient(120deg,rgba(35,106,151,.22),rgba(18,53,81,.35));border:1px solid rgba(104,185,232,.22);border-radius:16px;color:#dceeff;padding:16px}
+#tab-search .geo-insight h5{color:#f4f9ff;font-size:16px}
+#tab-search .geo-insight p{color:#9eb8d1}
+#tab-search .geo-passport-label{color:#78cafa;letter-spacing:.12em;font-size:9px;font-weight:800}
+#tab-search .geo-facts span{color:#8faac5;background:rgba(3,17,31,.35);border:1px solid rgba(137,183,219,.12);border-radius:10px;padding:9px}
+#tab-search .geo-facts b{color:#e8f6ff}
+#tab-search .geo-book-actions button{background:linear-gradient(110deg,#238acb,#62c2f4);color:#061c2d;border-radius:11px;font-weight:800}
+#tab-search .geo-book-actions .geo-economics-link{background:transparent;border:1px solid rgba(116,185,229,.25);color:#a9dcfa}
+#tab-search .geo-demo-note{color:#7895b2}
+#tab-search .geo-results-head{margin:17px 0 9px}
+#tab-search .geo-results-head b{color:#e9f4ff}
+#tab-search .geo-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+#tab-search .geo-result{min-width:0;text-align:left;background:rgba(4,19,34,.42);border:1px solid rgba(129,177,215,.16);border-radius:13px;padding:12px;color:#dcecff;transition:border-color .2s,background .2s}
+#tab-search .geo-result:hover,#tab-search .geo-result.active{background:rgba(40,112,157,.2);border-color:rgba(94,190,245,.55)}
+#tab-search .geo-result strong{color:#eaf6ff;font-size:12px}
+#tab-search .geo-result small,#tab-search .geo-result .mini{color:#89a5c0;font-size:10px;line-height:1.5}
+#tab-search .geo-result b{display:block;color:#8bd4ff;font-size:13px;margin:6px 0}
+#tab-search .geo-empty{grid-column:1/-1;color:#9bb3cb;background:rgba(5,20,35,.45);border:1px dashed rgba(131,177,212,.25);border-radius:13px;padding:20px}
+#tab-search .results>.box{padding:20px;position:sticky;top:90px}
+#tab-search .warehouse-list{gap:11px}
+#tab-search .wh{background:rgba(4,19,34,.43);border:1px solid rgba(130,178,216,.18);border-radius:14px;padding:15px;transition:transform .2s,border-color .2s,background .2s}
+#tab-search .wh:hover{transform:translateY(-2px);border-color:rgba(89,184,239,.45)}
+#tab-search .wh.selected{background:rgba(35,108,158,.22);border:1px solid rgba(93,190,245,.65);box-shadow:inset 3px 0 #55b9f5}
+#tab-search .wh b{color:#edf6ff}
+#tab-search .wh small{color:#8da8c2}
+#tab-search .wh .price{color:#83d0ff;font-size:16px}
+#tab-search .wh .tag{background:rgba(48,180,143,.12);border:1px solid rgba(67,198,157,.2);color:#7ee0be;border-radius:999px;padding:5px 8px}
+@media(max-width:1050px){
+ #tab-search .results{grid-template-columns:1fr}
+ #tab-search .results>.box{position:static}
+ #tab-search .warehouse-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:720px){
+ #tab-search .formgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+ #tab-search .map-toolbar{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #tab-search .map-toolbar input{grid-column:1/-1}
+ #tab-search .geo-map{aspect-ratio:1.25/1;min-height:220px}
+ #tab-search .geo-results{grid-template-columns:1fr}
+ #tab-search .warehouse-list{grid-template-columns:1fr}
+}
+@media(max-width:440px){
+ #tab-search .formgrid{grid-template-columns:1fr}
+ #tab-search .panelhead{gap:10px}
+ #tab-search .calc-actions .btn{width:100%;font-size:13px}
+ #tab-search .geo-facts{grid-template-columns:1fr}
+}
+</style>
+</body></html>
