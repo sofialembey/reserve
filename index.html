@@ -850,7 +850,7 @@ if(el('twin-svg').closest('.tab-panel').classList.contains('active'))twinRender(
   let visible=false, frame=0;
   function animate(time) {
     frame=0;
-    if(!visible||reduced.matches||narrow.matches||!length)return;
+    if(!visible||reduced.matches||!length)return;
     position((time/1000*65)%length);
     frame=requestAnimationFrame(animate);
   }
@@ -872,15 +872,8 @@ if(el('twin-svg').closest('.tab-panel').classList.contains('active'))twinRender(
         const box=card.getBoundingClientRect();
         return box.top<=target && box.bottom>=target;
       });
-      const start=section.querySelector('.hero-network').getBoundingClientRect().bottom;
-      const progress=Math.max(0,Math.min(1,(target-start)/Math.max(1,cards.at(-1).getBoundingClientRect().bottom+31-start)));
-      if(length){
-        mobileGoal=length*(reduced.matches?.12:progress);
-        if(mobileDistance===null||reduced.matches){
-          mobileDistance=mobileGoal;
-          position(mobileDistance);
-        }else if(!mobileFrame)mobileFrame=requestAnimationFrame(glide);
-      }
+      // The truck follows the visible perimeter path continuously on phones;
+      // page scrolling only changes the highlighted process card.
     }
     cards.forEach(card=>card.classList.toggle('route-active',card===active));
   }
@@ -892,7 +885,7 @@ if(el('twin-svg').closest('.tab-panel').classList.contains('active'))twinRender(
     draw();
     if(length&&!narrow.matches)position(length*.13);
     syncMobile();
-    if(visible&&!reduced.matches&&!narrow.matches&&!frame)frame=requestAnimationFrame(animate);
+    if(visible&&!reduced.matches&&!frame)frame=requestAnimationFrame(animate);
   }
   new ResizeObserver(update).observe(section);
   new IntersectionObserver(([entry])=>{
