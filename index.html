@@ -357,7 +357,7 @@ const geoWarehouses=[
 let geoSelected=17;
 function geoMatches(w){
  const val=id=>document.getElementById(id)?.value||'all';
- const q=val('map-query').toLowerCase().trim(),f=val('map-filter'),r=val('map-region');
+ const q=(document.getElementById('map-query')?.value||'').toLowerCase().trim(),f=val('map-filter'),r=val('map-region');
  const type=val('map-type'),area=Number(val('map-area'))||0,capacity=Number(val('map-capacity'))||0;
  const temp=val('map-temp'),service=val('map-service'),availability=val('map-availability');
  return (!q||(w.city+' '+w.name+' '+w.region).toLowerCase().includes(q))
