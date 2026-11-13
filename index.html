@@ -1055,6 +1055,76 @@ input,select,textarea{min-height:48px!important;padding:12px 16px!important}
  .hero-proof{margin-top:25px!important}
  .hero-bottomline{margin-top:40px!important;padding-top:20px!important}
 }
+</style>
+<style id="reserve-clear-glass-v5">
+/* Clear glass: transparency first, restrained surfaces, simple hierarchy */
+:root{
+ --clear-blue:rgba(108,165,245,.075);
+ --clear-line:rgba(255,255,255,.68);
+ --clear-shadow:0 12px 34px rgba(40,83,150,.045),inset 0 1px 0 rgba(255,255,255,.72);
+}
+body{
+ background:
+  radial-gradient(ellipse at 12% 5%,rgba(142,190,255,.13),transparent 34%),
+  radial-gradient(ellipse at 88% 32%,rgba(157,218,255,.10),transparent 32%),
+  linear-gradient(145deg,#f2f7ff 0%,#f8fbff 52%,#f0f6ff 100%)!important;
+}
+.route-scene,.route-card,.module-card,.panel,.tab-panel,.step,.how-steps li,
+.pricing-card,.price-card,.feature-card,.workspace,.dashboard-card,.map-panel,
+.twin-panel,.result-card,.metric,.stat-card,.form-card,.demo-card,.geo-cluster-panel{
+ background:rgba(255,255,255,.12)!important;
+ border:1px solid var(--clear-line)!important;
+ box-shadow:var(--clear-shadow)!important;
+ -webkit-backdrop-filter:blur(22px) saturate(145%)!important;
+ backdrop-filter:blur(22px) saturate(145%)!important;
+}
+.route-scene{
+ background:rgba(196,220,255,.075)!important;
+ border-color:rgba(255,255,255,.76)!important;
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.78)!important;
+}
+.route-card,.module-card,.step,.how-steps li,.pricing-card,.price-card,
+.feature-card,.result-card,.metric,.stat-card,.form-card,.demo-card{
+ background:rgba(255,255,255,.10)!important;
+ box-shadow:0 8px 24px rgba(45,88,150,.035),inset 0 1px 0 rgba(255,255,255,.72)!important;
+}
+.route-card:before,.module-card:before,.step:before,.how-steps li:before,
+.pricing-card:before,.price-card:before,.feature-card:before,.result-card:before{
+ opacity:.24!important;
+}
+.panel,.tab-panel,.workspace,.dashboard-card,.map-panel,.twin-panel,.geo-cluster-panel{
+ background:rgba(214,231,255,.09)!important;
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.74)!important;
+}
+.route-view{
+ background:rgba(142,188,250,.10)!important;
+ border:1px solid rgba(255,255,255,.72)!important;
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.8)!important;
+}
+.nav{
+ background:rgba(238,246,255,.54)!important;
+ box-shadow:0 6px 22px rgba(37,76,137,.045),inset 0 1px 0 rgba(255,255,255,.86)!important;
+}
+.hero:before{opacity:.55!important}
+.section{padding-top:clamp(76px,8vw,112px)!important;padding-bottom:clamp(76px,8vw,112px)!important}
+.section h2{margin-bottom:30px!important}
+.route-card,.module-card,.step,.how-steps li,.pricing-card,.price-card,.feature-card,.result-card{
+ border-radius:20px!important;
+}
+.route-card:hover,.module-card:hover,.step:hover,.feature-card:hover{
+ box-shadow:0 14px 34px rgba(40,83,150,.075),inset 0 1px 0 rgba(255,255,255,.82)!important;
+}
+input,select,textarea{
+ background:rgba(255,255,255,.34)!important;
+ border:1px solid rgba(255,255,255,.78)!important;
+ box-shadow:inset 0 1px 2px rgba(37,83,156,.035)!important;
+}
+@media(max-width:620px){
+ .route-scene{background:rgba(196,220,255,.055)!important}
+ .route-card,.module-card,.step,.how-steps li,.pricing-card,.price-card,.feature-card,.result-card{
+  background:rgba(255,255,255,.14)!important;
+ }
+}
 </style></head><body>
 <header class="nav"><div class="wrap navin"><a class="logo" href="#top"><span class="logo-mark">◆</span>RESERVE<span style="color:#5e95ed;font-size:12px;letter-spacing:1px">SMART NETWORK</span></a><nav class="links"><a href="#modules">Решение</a><a href="#demo">Карта и демо</a><a href="#pricing">Тарифы</a></nav><button class="btn sm" onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">Открыть демо ↗</button></div></header>
 <main id="top"><div class="connected-route"><section class="hero" aria-labelledby="hero-title">
