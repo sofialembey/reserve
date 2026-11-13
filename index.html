@@ -2249,4 +2249,56 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 @media(max-width:560px){#demo .workspace{padding:8px!important;border-radius:20px!important}#demo .sidebar{grid-template-columns:repeat(2,minmax(0,1fr))!important;padding:10px!important}#demo .side-link{font-size:11px!important;padding:9px 6px!important}#demo .panel{padding:14px 10px!important}#pricing .plan.featured{transform:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
+
+<style id="reserve-card-system-fix-v4">
+/* Card normalization pass: catch legacy component variants and tab-specific overrides. */
+:root{--rs-glass:rgba(255,255,255,.76);--rs-glass-strong:rgba(255,255,255,.9);--rs-border:rgba(255,255,255,.96);--rs-ink:#173b5c;--rs-muted:#7893ab;--rs-blue:#318ed1}
+.route-card,.route-cards .route-card,.market-card,.module-card,.eco-node,.tech-stack,.tech-aside,.tech-layer,.finance-main,.finance-side,.proof-grid>*,.how-steps>li,.how-steps .step,.step,.pricing-card,.price-card,.feature-card,.demo-card,.metric,.stat-card,.form-card,.result-card{
+ background:linear-gradient(145deg,rgba(255,255,255,.92),rgba(235,247,255,.78))!important;
+ color:#173b5c!important;border:1px solid rgba(255,255,255,.98)!important;
+ box-shadow:0 14px 38px rgba(63,126,166,.09),inset 0 1px 0 #fff!important;
+ border-radius:20px!important
+}
+.route-card h3,.route-card h4,.market-card h3,.module-card h3,.how-steps h3,.step h3,.finance-main h3,.finance-side h3{color:#173b5c!important}
+.route-card p,.market-card p,.module-card p,.how-steps p,.step p,.finance-main p,.finance-side p{color:#7893ab!important}
+.route-view{background:linear-gradient(145deg,rgba(220,242,255,.9),rgba(255,255,255,.9))!important;border:1px solid rgba(255,255,255,.95)!important;border-radius:16px!important}
+.market-flow,.ecosystem-stage,.tech-aside{background:rgba(255,255,255,.55)!important;border:1px solid rgba(255,255,255,.9)!important;border-radius:20px!important}
+.tech-layer{background:rgba(255,255,255,.78)!important;border-color:rgba(255,255,255,.96)!important}
+.finance-kpis article,.proof-grid article,.proof-grid .proof-item{background:rgba(255,255,255,.78)!important;border:1px solid #fff!important;border-radius:15px!important;color:#315f7f!important}
+#demo .tab-panel,#demo .tab-panel *{--tab-ink:#173b5c}
+#demo .tab-panel{color:#315f7f!important}
+#demo .box,#demo .calc-box,#demo .results>.box,#demo .result-card,#demo .reserve-map-box,#demo .notice,#demo .table-wrap,#demo .chart,#demo .twin-shell,#demo .twin-stage,#demo .twin-grid,#demo .twin-stock,#demo .twin-info,#demo .twin-panel,#demo .timeline{
+ background:linear-gradient(145deg,rgba(255,255,255,.94),rgba(237,247,255,.84))!important;
+ color:#315f7f!important;border:1px solid rgba(255,255,255,.98)!important;
+ box-shadow:0 12px 32px rgba(65,126,165,.075),inset 0 1px 0 #fff!important;border-radius:17px!important
+}
+#demo .box h3,#demo .box h4,#demo .calc-box h3,#demo .calc-box h4,#demo .result-card h3,#demo .result-card h4,#demo .notice strong,#demo .twin-info strong{color:#173b5c!important}
+#demo .box p,#demo .calc-box p,#demo .result-card p,#demo .notice p,#demo .twin-info p{color:#7893ab!important}
+#demo .step,#demo .notice,#demo .chip,#demo .tag,#demo .twin-kpi,#demo .stat,#demo .stats3>div,#demo .stats3 article,#demo .twin-kpis>div{
+ background:rgba(231,245,255,.78)!important;color:#315f7f!important;
+ border:1px solid rgba(255,255,255,.98)!important;border-radius:13px!important
+}
+#demo .positive{color:#168b70!important;background:rgba(223,248,239,.86)!important}
+#demo .negative{color:#b66b52!important;background:rgba(255,239,231,.86)!important}
+#demo .tag,#demo .chip{color:#398fc4!important}
+#demo .panelhead h3,#demo .panelhead strong,#demo .twin-toolbar label{color:#173b5c!important}
+#demo .panelhead p,#demo .smallnote,#demo .hint,#demo .muted{color:#7893ab!important}
+#demo label{color:#547995!important}
+#demo input,#demo select,#demo textarea{color:#244c69!important;background:rgba(255,255,255,.92)!important;border:1px solid rgba(125,181,216,.42)!important}
+#demo input::placeholder,#demo textarea::placeholder{color:#9bb0c1!important}
+#demo .table-wrap{overflow-x:auto}
+#demo table{background:transparent!important;color:#496e89!important}
+#demo th{background:rgba(218,240,253,.72)!important;color:#477b9e!important}
+#demo td{background:rgba(255,255,255,.38)!important;color:#54758e!important}
+#demo .geo-map{background:linear-gradient(145deg,#e8f6ff,#f8fcff)!important;border:1px solid rgba(255,255,255,.98)!important}
+#demo .geo-map-counter,#demo .geo-map-caption,#demo .geo-legend{background:rgba(255,255,255,.88)!important;color:#477b9e!important;border:1px solid #fff!important;box-shadow:0 8px 22px rgba(65,126,165,.08)!important}
+#demo .twin-stage{background:radial-gradient(ellipse at 50% 40%,rgba(188,228,251,.52),transparent 60%),linear-gradient(145deg,#edf8ff,#fff)!important}
+#demo .twin-toolbar select,#demo .twin-toolbar input{background:#fff!important;color:#315f7f!important}
+#demo .twin-btn{background:rgba(255,255,255,.82)!important;color:#477b9e!important;border:1px solid #d9edf9!important}
+#demo .twin-btn.active{background:#dff2ff!important;color:#216d9f!important;border-color:#9ed8f6!important}
+#demo .chart svg text,#demo .chart canvas{color:#547995!important}
+#demo .geo-cluster-panel,#demo .geo-passport-label,#demo .geo-insight{background:rgba(255,255,255,.94)!important;color:#315f7f!important;border:1px solid #fff!important}
+@media(max-width:820px){.route-card,.market-card,.module-card,.how-steps>li{border-radius:17px!important}}
+@media(prefers-reduced-motion:reduce){#demo .side-link{transition:none!important}}
+</style>
 </body></html>
